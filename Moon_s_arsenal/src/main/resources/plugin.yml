@@ -1,0 +1,7 @@
+name: Moon_s_arsenal
+version: '${project.version}'
+main: me.moonboygamer.moon_s_arsenal.Moon_s_arsenal
+api-version: '1.20'
+commands:
+  cgive:
+    description: custom give
