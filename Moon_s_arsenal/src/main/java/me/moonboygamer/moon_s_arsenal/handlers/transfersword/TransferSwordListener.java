@@ -71,8 +71,8 @@ public class TransferSwordListener implements Listener {
                             player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta();
                             ItemMeta meta = player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta();
                             List<String> lore = new ArrayList<>();
-                            lore.add(ChatColor.GRAY + "Stores potion effects as Hate");
-                            lore.add(ChatColor.GRAY + "Hate: " + hate1 + "/10");
+                            lore.add(ChatColor.GRAY + "Stores potion effects inside");
+                            lore.add(ChatColor.GRAY + "Potions: " + hate1 + "/10");
                             meta.getPersistentDataContainer().set(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType(), hate1);
                             meta.setLore(lore);
                             player.getInventory().getItem(EquipmentSlot.HAND).setItemMeta(meta);
@@ -88,8 +88,8 @@ public class TransferSwordListener implements Listener {
                 //set hate to 0
                 ItemMeta meta = player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta();
                 List<String> lore = new ArrayList<>();
-                lore.add(ChatColor.GRAY + "Stores potion effects as Hate");
-                lore.add(ChatColor.GRAY + "Hate: 0/10");
+                lore.add(ChatColor.GRAY + "Stores potion effects inside");
+                lore.add(ChatColor.GRAY + "Potions: 0/10");
                 meta.getPersistentDataContainer().set(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType(), 0);
                 meta.setLore(lore);
                 player.getInventory().getItem(EquipmentSlot.HAND).setItemMeta(meta);

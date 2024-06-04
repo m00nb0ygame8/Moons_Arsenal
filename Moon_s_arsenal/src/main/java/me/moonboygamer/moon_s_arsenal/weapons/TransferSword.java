@@ -23,7 +23,7 @@ public class TransferSword implements ICustomItem {
         meta.setDisplayName(ChatColor.AQUA + "Transfer Sword");
         meta.setUnbreakable(true);
         meta.getPersistentDataContainer().set(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType(), 0);
-        meta.setLore(List.of(ChatColor.GRAY + "Stores potion effects as Hate", ChatColor.GRAY + "Hate: 0/10"));
+        meta.setLore(List.of(ChatColor.GRAY + "Stores potion effects inside", ChatColor.GRAY + "Potions: 0/10"));
         item.setItemMeta(meta);
         return item;
     }
