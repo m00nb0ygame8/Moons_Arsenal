@@ -2,6 +2,7 @@ package me.moonboygamer.moon_s_arsenal.weapons;
 
 import me.moonboygamer.moon_s_arsenal.Moon_s_arsenal;
 import me.moonboygamer.moon_s_arsenal.handlers.siren_s_call.SirensCallListener;
+import me.moonboygamer.moon_s_arsenal.util.CustomKeys;
 import me.moonboygamer.moon_s_arsenal.util.ICustomItem;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -19,6 +20,7 @@ public class SirensCall implements ICustomItem {
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName(ChatColor.DARK_RED + "Siren\'s Call");
         meta.setUnbreakable(true);
+        meta.getPersistentDataContainer().set(CustomKeys.SirensCall.getKey(), CustomKeys.SirensCall.getType(), true);
         item.setItemMeta(meta);
         return item;
     }

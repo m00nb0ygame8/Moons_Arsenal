@@ -25,7 +25,7 @@ public class AbyssalTridentListener implements Listener {
         if(event.getEntity() instanceof Trident && event.getEntity().getShooter() instanceof Player){
             Trident trident = (Trident) event.getEntity();
             Player player = (Player) event.getEntity().getShooter();
-            boolean playerHasAbyssalTrident = player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getDisplayName().equals(AbyssalTrident.getAbyssalTrident().getItemMeta().getDisplayName());
+            boolean playerHasAbyssalTrident = player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getDisplayName().equals(AbyssalTrident.getAbyssalTrident().getItemMeta().getDisplayName()) && player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().has(CustomKeys.AbyssalTrident.getKey(), CustomKeys.AbyssalTrident.getType()) && (boolean) player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().get(CustomKeys.AbyssalTrident.getKey(), CustomKeys.AbyssalTrident.getType()) == true;
             if(playerHasAbyssalTrident) {
                 trident.getPersistentDataContainer().set(CustomKeys.IsAbyssalTrident.getKey(), CustomKeys.IsAbyssalTrident.getType(), true) ;
             }

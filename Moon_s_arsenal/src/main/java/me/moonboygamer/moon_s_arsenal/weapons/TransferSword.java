@@ -24,6 +24,7 @@ public class TransferSword implements ICustomItem {
         meta.setUnbreakable(true);
         meta.getPersistentDataContainer().set(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType(), 0);
         meta.setLore(List.of(ChatColor.GRAY + "Stores potion effects inside", ChatColor.GRAY + "Potions: 0/10"));
+        meta.getPersistentDataContainer().set(CustomKeys.TransferSword.getKey(), CustomKeys.TransferSword.getType(), true);
         item.setItemMeta(meta);
         return item;
     }

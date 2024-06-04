@@ -3,6 +3,7 @@ package me.moonboygamer.moon_s_arsenal.weapons;
 import me.moonboygamer.moon_s_arsenal.Moon_s_arsenal;
 import me.moonboygamer.moon_s_arsenal.handlers.chorus_pearl.ChorusPearlListener;
 import me.moonboygamer.moon_s_arsenal.handlers.siren_s_call.SirensCallListener;
+import me.moonboygamer.moon_s_arsenal.util.CustomKeys;
 import me.moonboygamer.moon_s_arsenal.util.ICustomItem;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -20,6 +21,7 @@ public class ChorusPearl implements ICustomItem {
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName(ChatColor.DARK_PURPLE + "Chorus Pearl");
         meta.setUnbreakable(true);
+        meta.getPersistentDataContainer().set(CustomKeys.ChorusPearl.getKey(), CustomKeys.ChorusPearl.getType(), true);
         item.setItemMeta(meta);
         item.setAmount(16);
         return item;

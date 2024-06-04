@@ -1,6 +1,7 @@
 package me.moonboygamer.moon_s_arsenal.util;
 
 import me.moonboygamer.moon_s_arsenal.Moon_s_arsenal;
+import me.moonboygamer.moon_s_arsenal.weapons.AbyssalTrident;
 import org.bukkit.NamespacedKey;
 import org.bukkit.persistence.PersistentDataType;
 
@@ -17,7 +18,14 @@ public enum CustomKeys {
     EchoBowCooldown("echo_bow_cooldown", PersistentDataType.INTEGER),
     ReflectiveChestplateCooldown("reflective_chestplate_cooldown", PersistentDataType.INTEGER),
     TransferSwordCooldown("transfer_sword_cooldown", PersistentDataType.INTEGER),
-    SirnesCallCooldown("sirens_call_cooldown", PersistentDataType.INTEGER),;
+    SirnesCallCooldown("sirens_call_cooldown", PersistentDataType.INTEGER),
+    //item identifiers
+    AbyssalTrident("abyssal_trident", PersistentDataType.BOOLEAN),
+    EchoBow("echo_bow", PersistentDataType.BOOLEAN),
+    ReflectiveChestplate("reflective_chestplate", PersistentDataType.BOOLEAN),
+    TransferSword("transfer_sword", PersistentDataType.BOOLEAN),
+    SirensCall("sirens_call", PersistentDataType.BOOLEAN),
+    ChorusPearl("chorus_pearl", PersistentDataType.BOOLEAN);
     private String key;
     private PersistentDataType type;
 

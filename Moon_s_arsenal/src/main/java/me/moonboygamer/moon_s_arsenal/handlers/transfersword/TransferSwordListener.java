@@ -53,7 +53,7 @@ public class TransferSwordListener implements Listener {
         if (event.getDamager() instanceof Player && event.getEntity() instanceof LivingEntity) {
             Player player = (Player) event.getDamager();
             LivingEntity target = (LivingEntity) event.getEntity();
-            if(player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getDisplayName().equals(TransferSword.getTransferSword().getItemMeta().getDisplayName())) {
+            if(player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getDisplayName().equals(TransferSword.getTransferSword().getItemMeta().getDisplayName()) && player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().has(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType()) && (boolean) player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().get(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType()) == true) {
 
                 int hate = (int) player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().get(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType());
 

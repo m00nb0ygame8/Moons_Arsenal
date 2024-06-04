@@ -2,6 +2,7 @@ package me.moonboygamer.moon_s_arsenal.weapons;
 
 import me.moonboygamer.moon_s_arsenal.Moon_s_arsenal;
 import me.moonboygamer.moon_s_arsenal.handlers.abyssal_trident.AbyssalTridentListener;
+import me.moonboygamer.moon_s_arsenal.util.CustomKeys;
 import me.moonboygamer.moon_s_arsenal.util.ICustomItem;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -21,6 +22,7 @@ public class AbyssalTrident implements ICustomItem {
         meta.setDisplayName(ChatColor.DARK_PURPLE + "Abyssal Trident");
         meta.addEnchant(Enchantment.LOYALTY, 3, true);
         meta.setUnbreakable(true);
+        meta.getPersistentDataContainer().set(CustomKeys.IsAbyssalTrident.getKey(), CustomKeys.IsAbyssalTrident.getType(), true);
         item.setItemMeta(meta);
         return item;
     }

@@ -25,7 +25,7 @@ public class ReflectiveChestplateListener implements Listener {
             Player player = (Player) event.getEntity();
             LivingEntity attacker = (LivingEntity) event.getDamager();
             if(player.getInventory().getItem(EquipmentSlot.CHEST) != null) {
-                if(player.getInventory().getItem(EquipmentSlot.CHEST).getItemMeta().getDisplayName().equals(ReflectiveChestplate.getRefectiveChestplate().getItemMeta().getDisplayName())) {
+                if(player.getInventory().getItem(EquipmentSlot.CHEST).getItemMeta().getDisplayName().equals(ReflectiveChestplate.getRefectiveChestplate().getItemMeta().getDisplayName()) && player.getInventory().getItem(EquipmentSlot.CHEST).getItemMeta().getPersistentDataContainer().has(CustomKeys.ReflectiveChestplate.getKey(), CustomKeys.ReflectiveChestplate.getType()) && (boolean) player.getInventory().getItem(EquipmentSlot.CHEST).getItemMeta().getPersistentDataContainer().get(CustomKeys.ReflectiveChestplate.getKey(), CustomKeys.ReflectiveChestplate.getType()) == true) {
                     if(player.getInventory().getItem(EquipmentSlot.CHEST).getItemMeta().getPersistentDataContainer().has(CustomKeys.ReflectiveChestplateCharges.getKey(), CustomKeys.ReflectiveChestplateCharges.getType())) {
                         if(CooldownManager.getManager(player).hasCooldown(CustomKeys.ReflectiveChestplateCooldown.getKey())) {
                             return;

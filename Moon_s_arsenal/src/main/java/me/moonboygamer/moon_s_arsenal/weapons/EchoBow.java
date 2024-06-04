@@ -2,6 +2,7 @@ package me.moonboygamer.moon_s_arsenal.weapons;
 
 import me.moonboygamer.moon_s_arsenal.Moon_s_arsenal;
 import me.moonboygamer.moon_s_arsenal.handlers.echo_bow.EchoBowListener;
+import me.moonboygamer.moon_s_arsenal.util.CustomKeys;
 import me.moonboygamer.moon_s_arsenal.util.ICustomItem;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -21,6 +22,7 @@ public class EchoBow implements ICustomItem {
         meta.setDisplayName(ChatColor.DARK_AQUA + "Echo Bow");
         meta.addEnchant(Enchantment.ARROW_INFINITE, 1, true);
         meta.setUnbreakable(true);
+        meta.getPersistentDataContainer().set(CustomKeys.EchoBow.getKey(), CustomKeys.EchoBow.getType(), true);
         item.setItemMeta(meta);
         return item;
     }

@@ -25,6 +25,7 @@ public class ReflectiveChestplate implements ICustomItem {
         meta.setUnbreakable(true);
         meta.getPersistentDataContainer().set(CustomKeys.ReflectiveChestplateCharges.getKey(), CustomKeys.ReflectiveChestplateCharges.getType(), 0);
         meta.setLore(List.of(ChatColor.GRAY + "Reflects damage back to the attacker", ChatColor.GRAY + "Charges: 0/4"));
+        meta.getPersistentDataContainer().set(CustomKeys.ReflectiveChestplate.getKey(), CustomKeys.ReflectiveChestplate.getType(), true);
         item.setItemMeta(meta);
         return item;
     }

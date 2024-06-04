@@ -18,7 +18,7 @@ public class EchoBowListener implements Listener {
     public void onShoot(EntityShootBowEvent event) {
         if(event.getEntity() instanceof Player) {
             Player player = (Player) event.getEntity();
-            if(player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getDisplayName().equals(EchoBow.getEchoBow().getItemMeta().getDisplayName()))  {
+            if(player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getDisplayName().equals(EchoBow.getEchoBow().getItemMeta().getDisplayName()) && player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().has(CustomKeys.EchoBow.getKey(), CustomKeys.EchoBow.getType()) && (boolean) player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().get(CustomKeys.EchoBow.getKey(), CustomKeys.EchoBow.getType()) == true) {
                 event.getProjectile().getPersistentDataContainer().set(CustomKeys.EchoBowFirstProjectile.getKey(), CustomKeys.EchoBowFirstProjectile.getType(), true);
             }
         }
