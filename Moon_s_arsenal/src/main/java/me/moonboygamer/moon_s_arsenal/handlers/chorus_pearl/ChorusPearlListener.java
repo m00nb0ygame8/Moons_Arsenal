@@ -16,6 +16,7 @@ public class ChorusPearlListener implements Listener {
     public void onChorusPearlThrow(ProjectileLaunchEvent event) {
         if(event.getEntity().getShooter() instanceof Player) {
             Player player = (Player) event.getEntity().getShooter();
+            if(player.getPlayer().getInventory().getItem(EquipmentSlot.HAND) == null) return;
             if(player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getDisplayName().equals(ChorusPearl.getChorusPearl().getItemMeta().getDisplayName()) && player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().has(CustomKeys.ChorusPearl.getKey(), CustomKeys.ChorusPearl.getType()) && (boolean) player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().get(CustomKeys.ChorusPearl.getKey(), CustomKeys.ChorusPearl.getType()) == true){
                 event.getEntity().getPersistentDataContainer().set(CustomKeys.IsChorusPearl.getKey(), CustomKeys.IsChorusPearl.getType(), true);
             }

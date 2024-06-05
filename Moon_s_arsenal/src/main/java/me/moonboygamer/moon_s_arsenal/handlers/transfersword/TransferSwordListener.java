@@ -23,6 +23,7 @@ public class TransferSwordListener implements Listener {
     public void onPlayerRC(PlayerInteractEvent event) {
         if(event.getAction().equals(Action.RIGHT_CLICK_AIR) || event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
             if(event.getPlayer().getInventory().getItem(EquipmentSlot.HAND) != null) {
+                if(event.getPlayer().getInventory().getItem(EquipmentSlot.HAND) == null) return;
                 if(event.getPlayer().getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getDisplayName().equals(TransferSword.getTransferSword().getItemMeta().getDisplayName())) {
                     if(CooldownManager.getManager(event.getPlayer()).hasCooldown(CustomKeys.TransferSwordCooldown.getKey())) {
                         event.getPlayer().sendMessage("Transfer Sword is on cooldown");
@@ -35,8 +36,8 @@ public class TransferSwordListener implements Listener {
                             event.getPlayer().getInventory().getItem(EquipmentSlot.HAND).getItemMeta();
                             ItemMeta meta = event.getPlayer().getInventory().getItem(EquipmentSlot.HAND).getItemMeta();
                             List<String> lore = new ArrayList<>();
-                            lore.add(ChatColor.GRAY + "Stores potion effects as Hate");
-                            lore.add(ChatColor.GRAY + "Hate: " + hate + "/10");
+                            lore.add(ChatColor.GRAY + "Stores potion effects inside");
+                            lore.add(ChatColor.GRAY + "Potions: " + hate + "/10");
                             meta.getPersistentDataContainer().set(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType(), hate);
                             meta.setLore(lore);
                             event.getPlayer().getInventory().getItem(EquipmentSlot.HAND).setItemMeta(meta);

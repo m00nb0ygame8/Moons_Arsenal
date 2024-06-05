@@ -33,6 +33,7 @@ public class AbyssalTridentListener implements Listener {
     }
     @EventHandler
     public void onTridentLand(ProjectileHitEvent event) {
+        if(!(event.getEntity() instanceof Trident)) return;
         if(event.getHitEntity() != null) {
             if(event.getHitEntity() instanceof Player) {
                 Player player = (Player) event.getHitEntity();
