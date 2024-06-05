@@ -18,6 +18,10 @@ public class SirensCallForceLook extends BukkitRunnable {
 
     @Override
     public void run() {
+        if(player.isDead()) {
+            cancel();
+            return;
+        }
         if (ticks >= duration) {
             cancel();
             return;

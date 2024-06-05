@@ -3,6 +3,7 @@ package me.moonboygamer.moon_s_arsenal.handlers.chorus_pearl;
 import me.moonboygamer.moon_s_arsenal.util.CustomKeys;
 import me.moonboygamer.moon_s_arsenal.weapons.ChorusPearl;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -31,7 +32,7 @@ public class ChorusPearlListener implements Listener {
                 boolean foundGoodLocation = false;
                 while(!foundGoodLocation) {
                     Location randomLocation = new Location(event.getEntity().getWorld(), event.getHitBlock().getLocation().getX() + Math.random() * 20, event.getHitBlock().getLocation().getY(), event.getHitBlock().getLocation().getZ() + Math.random() * 20);
-                    if ((randomLocation.getBlock().isEmpty() && randomLocation.getBlock().getRelative(0, 1, 0).isEmpty() && !randomLocation.getBlock().getRelative(0, -1, 0).isEmpty()) ||(randomLocation.getBlock().isEmpty() && randomLocation.getBlock().getRelative(0, 1, 0).isEmpty() && !randomLocation.getBlock().getRelative(0, -1, 0).isEmpty())) {
+                    if ((randomLocation.getBlock().isEmpty() && randomLocation.getBlock().getRelative(0, 1, 0).isEmpty() && !randomLocation.getBlock().getRelative(0, -1, 0).isEmpty()) ||(randomLocation.getBlock().getType() == Material.WATER && randomLocation.getBlock().getRelative(0, 1, 0).getType() == Material.WATER && !randomLocation.getBlock().getRelative(0, -1, 0).isEmpty())) {
                         player.teleport(randomLocation);
                         foundGoodLocation = true;
 
