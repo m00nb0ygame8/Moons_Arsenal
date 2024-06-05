@@ -11,6 +11,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -19,6 +20,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public final class Moon_s_arsenal extends JavaPlugin {
     public static ItemRegistry registry = new ItemRegistry();
     private static Moon_s_arsenal instance;
+    public static ArrayList<Class<?>> toLoad = new ArrayList<>();
 
     @Override
     public void onEnable() {
@@ -27,18 +29,22 @@ public final class Moon_s_arsenal extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerJoinEventHandler(), this);
         //Cooldown Manager Init
         CooldownManager.init();
+        //add items for loading
+        toLoad.add(AbyssalTrident.class);
+        toLoad.add(ChorusPearl.class);
+        toLoad.add(EchoBow.class);
+        toLoad.add(ReflectiveChestplate.class);
+        toLoad.add(SirensCall.class);
+        toLoad.add(TransferSword.class);
         // Register Items
         try {
             ClassLoader cl = getClassLoader();
             Field[] fields = cl.getClass().getDeclaredFields();
-            List<WeaponClasses> eclass = Arrays.asList(WeaponClasses.class.getEnumConstants());
-            eclass.forEach(c -> {
-                try {
-                    c.getClazz().getClassLoader();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            });
+            if(!toLoad.isEmpty()) {
+                toLoad.forEach(clazz -> {
+                    clazz.getClass().getClassLoader();
+                });
+            }
             var ref = new Object() {
                 Field f = null;
             };
@@ -82,22 +88,5 @@ public final class Moon_s_arsenal extends JavaPlugin {
 
     public static Moon_s_arsenal getInstance() {
         return instance;
-    }
-    public enum WeaponClasses {
-        ABYSSAL_TRIDENT(AbyssalTrident.class),
-        ECHO_BOW(EchoBow.class),
-        REFLECTIVE_CHESTPLATE(ReflectiveChestplate.class),
-        SIRENS_CALL(SirensCall.class),
-        TRANSFER_SWORD(TransferSword.class),
-        CHORUS_PEARL(ChorusPearl.class);
-        private Class<? extends ICustomItem> clazz;
-
-        WeaponClasses(Class<? extends ICustomItem> clazz) {
-            this.clazz = clazz;
-        }
-
-        public Class<? extends ICustomItem> getClazz() {
-            return clazz;
-        }
     }
 }

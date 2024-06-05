@@ -17,7 +17,6 @@ me\moonboygamer\moon_s_arsenal\Moon_s_arsenal.class
 me\moonboygamer\moon_s_arsenal\handlers\abyssal_trident\AbyssalTridentListener.class
 me\moonboygamer\moon_s_arsenal\handlers\echo_bow\EchoBowArrowRunnable.class
 me\moonboygamer\moon_s_arsenal\weapons\TransferSword.class
-me\moonboygamer\moon_s_arsenal\Moon_s_arsenal$WeaponClasses.class
 me\moonboygamer\moon_s_arsenal\util\PlayerJoinEventHandler.class
 me\moonboygamer\moon_s_arsenal\weapons\SirensCall.class
 me\moonboygamer\moon_s_arsenal\util\ICustomItem.class
