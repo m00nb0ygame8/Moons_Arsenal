@@ -3,7 +3,6 @@ package me.moonboygamer.moon_s_arsenal.weapons;
 import me.moonboygamer.moon_s_arsenal.Moon_s_arsenal;
 import me.moonboygamer.moon_s_arsenal.handlers.abyssal_trident.AbyssalTridentListener;
 import me.moonboygamer.moon_s_arsenal.util.CustomKeys;
-import me.moonboygamer.moon_s_arsenal.util.ICustomItem;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -11,8 +10,8 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class AbyssalTrident implements ICustomItem {
-    public void init() {
+public class AbyssalTrident {
+    public static void init() {
         Moon_s_arsenal.registry.registerItem(getAbyssalTrident(), "abyssal_trident");
         Bukkit.getServer().getPluginManager().registerEvents(new AbyssalTridentListener(), Moon_s_arsenal.getInstance());
     }

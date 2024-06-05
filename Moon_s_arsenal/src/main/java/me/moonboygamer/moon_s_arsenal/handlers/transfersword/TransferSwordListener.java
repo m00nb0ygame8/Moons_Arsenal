@@ -37,7 +37,7 @@ public class TransferSwordListener implements Listener {
                             ItemMeta meta = event.getPlayer().getInventory().getItem(EquipmentSlot.HAND).getItemMeta();
                             List<String> lore = new ArrayList<>();
                             lore.add(ChatColor.GRAY + "Stores potion effects inside");
-                            lore.add(ChatColor.GRAY + "Potions: " + hate + "/10");
+                            lore.add(ChatColor.GRAY + "Potions : " + hate + "/10");
                             meta.getPersistentDataContainer().set(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType(), hate);
                             meta.setLore(lore);
                             event.getPlayer().getInventory().getItem(EquipmentSlot.HAND).setItemMeta(meta);
