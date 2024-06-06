@@ -1,9 +1,8 @@
-package me.moonboygamer.moon_s_arsenal.handlers.siren_s_call;
+package me.moonboygamer.moon_s_arsenal.weapons.siren_s_call;
 
 import me.moonboygamer.moon_s_arsenal.Moon_s_arsenal;
 import me.moonboygamer.moon_s_arsenal.util.CooldownManager;
 import me.moonboygamer.moon_s_arsenal.util.CustomKeys;
-import me.moonboygamer.moon_s_arsenal.weapons.SirensCall;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

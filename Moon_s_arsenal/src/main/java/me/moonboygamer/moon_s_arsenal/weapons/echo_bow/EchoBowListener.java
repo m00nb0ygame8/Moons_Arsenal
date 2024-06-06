@@ -1,9 +1,8 @@
-package me.moonboygamer.moon_s_arsenal.handlers.echo_bow;
+package me.moonboygamer.moon_s_arsenal.weapons.echo_bow;
 
 import me.moonboygamer.moon_s_arsenal.Moon_s_arsenal;
 import me.moonboygamer.moon_s_arsenal.util.CooldownManager;
 import me.moonboygamer.moon_s_arsenal.util.CustomKeys;
-import me.moonboygamer.moon_s_arsenal.weapons.EchoBow;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;

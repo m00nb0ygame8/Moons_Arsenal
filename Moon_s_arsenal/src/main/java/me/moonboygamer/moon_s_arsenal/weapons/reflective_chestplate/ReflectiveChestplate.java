@@ -1,8 +1,7 @@
-package me.moonboygamer.moon_s_arsenal.weapons;
+package me.moonboygamer.moon_s_arsenal.weapons.reflective_chestplate;
 
 import java.util.List;
 import me.moonboygamer.moon_s_arsenal.Moon_s_arsenal;
-import me.moonboygamer.moon_s_arsenal.handlers.reflective_chestplate.ReflectiveChestplateListener;
 import me.moonboygamer.moon_s_arsenal.util.CustomKeys;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

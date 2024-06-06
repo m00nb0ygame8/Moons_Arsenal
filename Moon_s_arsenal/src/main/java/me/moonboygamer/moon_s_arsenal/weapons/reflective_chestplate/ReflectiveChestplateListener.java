@@ -1,8 +1,7 @@
-package me.moonboygamer.moon_s_arsenal.handlers.reflective_chestplate;
+package me.moonboygamer.moon_s_arsenal.weapons.reflective_chestplate;
 
 import me.moonboygamer.moon_s_arsenal.util.CooldownManager;
 import me.moonboygamer.moon_s_arsenal.util.CustomKeys;
-import me.moonboygamer.moon_s_arsenal.weapons.ReflectiveChestplate;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;

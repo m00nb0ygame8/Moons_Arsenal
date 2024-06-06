@@ -1,4 +1,4 @@
-package me.moonboygamer.moon_s_arsenal.handlers.transfersword;
+package me.moonboygamer.moon_s_arsenal.weapons.transfersword;
 
 import me.moonboygamer.moon_s_arsenal.util.CustomKeys;
 import org.bukkit.entity.LivingEntity;

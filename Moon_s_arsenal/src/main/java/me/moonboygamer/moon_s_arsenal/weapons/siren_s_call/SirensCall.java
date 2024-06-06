@@ -1,7 +1,6 @@
-package me.moonboygamer.moon_s_arsenal.weapons;
+package me.moonboygamer.moon_s_arsenal.weapons.siren_s_call;
 
 import me.moonboygamer.moon_s_arsenal.Moon_s_arsenal;
-import me.moonboygamer.moon_s_arsenal.handlers.siren_s_call.SirensCallListener;
 import me.moonboygamer.moon_s_arsenal.util.CustomKeys;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

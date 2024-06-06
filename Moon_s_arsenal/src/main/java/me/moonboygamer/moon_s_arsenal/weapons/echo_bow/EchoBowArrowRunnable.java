@@ -1,4 +1,4 @@
-package me.moonboygamer.moon_s_arsenal.handlers.echo_bow;
+package me.moonboygamer.moon_s_arsenal.weapons.echo_bow;
 
 import me.moonboygamer.moon_s_arsenal.util.CooldownManager;
 import me.moonboygamer.moon_s_arsenal.util.CustomKeys;

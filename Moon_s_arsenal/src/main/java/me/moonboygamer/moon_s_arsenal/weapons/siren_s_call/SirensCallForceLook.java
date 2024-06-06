@@ -1,4 +1,4 @@
-package me.moonboygamer.moon_s_arsenal.handlers.siren_s_call;
+package me.moonboygamer.moon_s_arsenal.weapons.siren_s_call;
 
 import org.bukkit.Location;
 import org.bukkit.entity.LivingEntity;

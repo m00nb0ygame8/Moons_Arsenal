@@ -2,10 +2,15 @@ package me.moonboygamer.moon_s_arsenal;
 
 import me.moonboygamer.moon_s_arsenal.commands.CGCMD;
 import me.moonboygamer.moon_s_arsenal.commands.CGCMDTC;
+import me.moonboygamer.moon_s_arsenal.weapons.abyssal_trident.AbyssalTrident;
+import me.moonboygamer.moon_s_arsenal.weapons.chorus_pearl.ChorusPearl;
+import me.moonboygamer.moon_s_arsenal.weapons.echo_bow.EchoBow;
+import me.moonboygamer.moon_s_arsenal.weapons.reflective_chestplate.ReflectiveChestplate;
+import me.moonboygamer.moon_s_arsenal.weapons.siren_s_call.SirensCall;
+import me.moonboygamer.moon_s_arsenal.weapons.transfersword.TransferSword;
 import me.moonboygamer.moon_s_arsenal.util.CooldownManager;
 import me.moonboygamer.moon_s_arsenal.util.ItemRegistry;
 import me.moonboygamer.moon_s_arsenal.util.PlayerJoinEventHandler;
-import me.moonboygamer.moon_s_arsenal.weapons.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Moon_s_arsenal extends JavaPlugin {

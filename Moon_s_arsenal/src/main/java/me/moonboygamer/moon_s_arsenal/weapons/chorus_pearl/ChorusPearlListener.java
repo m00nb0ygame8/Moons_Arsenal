@@ -1,7 +1,6 @@
-package me.moonboygamer.moon_s_arsenal.handlers.chorus_pearl;
+package me.moonboygamer.moon_s_arsenal.weapons.chorus_pearl;
 
 import me.moonboygamer.moon_s_arsenal.util.CustomKeys;
-import me.moonboygamer.moon_s_arsenal.weapons.ChorusPearl;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

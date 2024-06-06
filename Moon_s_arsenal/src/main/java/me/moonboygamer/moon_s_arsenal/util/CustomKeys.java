@@ -1,7 +1,6 @@
 package me.moonboygamer.moon_s_arsenal.util;
 
 import me.moonboygamer.moon_s_arsenal.Moon_s_arsenal;
-import me.moonboygamer.moon_s_arsenal.weapons.AbyssalTrident;
 import org.bukkit.NamespacedKey;
 import org.bukkit.persistence.PersistentDataType;
 

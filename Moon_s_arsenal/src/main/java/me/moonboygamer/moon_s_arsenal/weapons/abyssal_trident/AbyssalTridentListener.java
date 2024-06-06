@@ -1,8 +1,7 @@
-package me.moonboygamer.moon_s_arsenal.handlers.abyssal_trident;
+package me.moonboygamer.moon_s_arsenal.weapons.abyssal_trident;
 
 import me.moonboygamer.moon_s_arsenal.util.CooldownManager;
 import me.moonboygamer.moon_s_arsenal.util.CustomKeys;
-import me.moonboygamer.moon_s_arsenal.weapons.AbyssalTrident;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.data.Waterlogged;
@@ -68,7 +67,7 @@ public class AbyssalTridentListener implements Listener {
                     }
                 });
             }
-            CooldownManager.getManager((Player) event.getEntity().getShooter()).addCooldown(CustomKeys.AbyssalTridentCooldown.getKey(), 20 * 5);
+            CooldownManager.getManager((Player) event.getEntity().getShooter()).addCooldown(CustomKeys.AbyssalTridentCooldown.getKey(), 20 * 10);
         }
     }
 }

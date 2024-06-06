@@ -1,7 +1,6 @@
-package me.moonboygamer.moon_s_arsenal.weapons;
+package me.moonboygamer.moon_s_arsenal.weapons.transfersword;
 
 import me.moonboygamer.moon_s_arsenal.Moon_s_arsenal;
-import me.moonboygamer.moon_s_arsenal.handlers.transfersword.TransferSwordListener;
 import me.moonboygamer.moon_s_arsenal.util.CustomKeys;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
