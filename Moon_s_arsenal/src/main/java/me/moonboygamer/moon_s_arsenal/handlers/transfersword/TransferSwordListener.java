@@ -24,7 +24,7 @@ public class TransferSwordListener implements Listener {
         if(event.getAction().equals(Action.RIGHT_CLICK_AIR) || event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
             if(event.getPlayer().getInventory().getItem(EquipmentSlot.HAND) != null) {
                 if(event.getPlayer().getInventory().getItem(EquipmentSlot.HAND) == null) return;
-                if(event.getPlayer().getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getDisplayName().equals(TransferSword.getTransferSword().getItemMeta().getDisplayName())) {
+                if(player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().has(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType()) && (boolean) player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().get(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType()) == true) {
                     if(CooldownManager.getManager(event.getPlayer()).hasCooldown(CustomKeys.TransferSwordCooldown.getKey())) {
                         event.getPlayer().sendMessage("Transfer Sword is on cooldown");
                         return;
@@ -54,7 +54,7 @@ public class TransferSwordListener implements Listener {
         if (event.getDamager() instanceof Player && event.getEntity() instanceof LivingEntity) {
             Player player = (Player) event.getDamager();
             LivingEntity target = (LivingEntity) event.getEntity();
-            if(player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getDisplayName().equals(TransferSword.getTransferSword().getItemMeta().getDisplayName()) && player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().has(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType()) && (boolean) player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().get(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType()) == true) {
+            if(player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().has(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType()) && (boolean) player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().get(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType()) == true) {
 
                 int hate = (int) player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().get(CustomKeys.TransferSwordHate.getKey(), CustomKeys.TransferSwordHate.getType());
 

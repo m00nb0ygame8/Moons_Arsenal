@@ -19,7 +19,7 @@ public class EchoBowListener implements Listener {
         if(event.getEntity() instanceof Player) {
             Player player = (Player) event.getEntity();
             if(player.getPlayer().getInventory().getItem(EquipmentSlot.HAND) == null) return;
-            if(player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getDisplayName().equals(EchoBow.getEchoBow().getItemMeta().getDisplayName()) && player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().has(CustomKeys.EchoBow.getKey(), CustomKeys.EchoBow.getType()) && (boolean) player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().get(CustomKeys.EchoBow.getKey(), CustomKeys.EchoBow.getType()) == true) {
+            if(player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().has(CustomKeys.EchoBow.getKey(), CustomKeys.EchoBow.getType()) && (boolean) player.getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().get(CustomKeys.EchoBow.getKey(), CustomKeys.EchoBow.getType()) == true) {
                 event.getProjectile().getPersistentDataContainer().set(CustomKeys.EchoBowFirstProjectile.getKey(), CustomKeys.EchoBowFirstProjectile.getType(), true);
             }
         }

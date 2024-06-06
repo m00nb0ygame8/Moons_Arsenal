@@ -18,7 +18,7 @@ public class SirensCallListener implements Listener {
     public void onUse(PlayerInteractEvent event) {
         if(event.getAction().equals(Action.RIGHT_CLICK_AIR) || event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
             if(event.getPlayer().getInventory().getItem(EquipmentSlot.HAND) == null) return;
-            if(event.getPlayer().getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getDisplayName().equals(SirensCall.getSirensCall().getItemMeta().getDisplayName()) && event.getPlayer().getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().has(CustomKeys.SirensCall.getKey(), CustomKeys.SirensCall.getType()) && (boolean) event.getPlayer().getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().get(CustomKeys.SirensCall.getKey(), CustomKeys.SirensCall.getType()) == true) {
+            if(event.getPlayer().getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().has(CustomKeys.SirensCall.getKey(), CustomKeys.SirensCall.getType()) && (boolean) event.getPlayer().getInventory().getItem(EquipmentSlot.HAND).getItemMeta().getPersistentDataContainer().get(CustomKeys.SirensCall.getKey(), CustomKeys.SirensCall.getType()) == true) {
                 if(CooldownManager.getManager(event.getPlayer()).hasCooldown(CustomKeys.SirnesCallCooldown.getKey())) {
                     event.getPlayer().sendMessage("Siren's Call is on cooldown");
                     return;
